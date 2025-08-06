@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AgregaTech - Seu agregador de vídeos sobre tecnologia e programação">
+    <meta name="keywords" content="tecnologia, programação, vídeos, tutoriais, desenvolvimento">
+    <title>AgregaTech - Vídeos de Tecnologia e Programação</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <h1><span class="logo-icon">⚡</span>AgregaTech</h1>
+                <p class="tagline">Conhecimento em cada clique</p>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#home" class="nav-link active">Início</a></li>
+                    <li><a href="#programming" class="nav-link">Programação</a></li>
+                    <li><a href="#webdev" class="nav-link">Web Dev</a></li>
+                    <li><a href="#mobile" class="nav-link">Mobile</a></li>
+                    <li><a href="#devops" class="nav-link">DevOps</a></li>
+                    <li><a href="#ai" class="nav-link">IA & ML</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section id="hero" class="hero-section">
+            <div class="container">
+                <div class="hero-content">
+                    <h2>Descubra os Melhores Vídeos de Tech</h2>
+                    <p>Curadoria especializada dos melhores conteúdos em tecnologia e programação do Brasil e do mundo</p>
+                    <div class="search-bar">
+                        <input type="search" placeholder="Buscar vídeos, canais ou tópicos..." aria-label="Campo de busca">
+                        <button type="submit" aria-label="Buscar">🔍</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="featured" class="featured-section">
+            <div class="container">
+                <h2 class="section-title">🌟 Vídeos em Destaque</h2>
+                <div class="video-grid featured-grid">
+                    <article class="video-card featured-card" data-video-id="c8mVlakBESE" role="button" tabindex="0" aria-label="Assistir vídeo: JavaScript ES6+ - Recursos Modernos que Todo Dev Deveria Conhecer">
+                        <div class="video-thumbnail">
+                            <img src="https://img.youtube.com/vi/c8mVlakBESE/maxresdefault.jpg" alt="Thumbnail do vídeo sobre JavaScript ES6+" loading="lazy">
+                            <div class="video-duration">25:30</div>
+                            <div class="play-button" aria-hidden="true">▶</div>
+                        </div>
+                        <div class="video-info">
+                            <div class="channel-info">
+                                <div class="channel-avatar">JS</div>
+                                <span class="channel-name">Código Fonte TV</span>
+                            </div>
+                            <h3 class="video-title">JavaScript ES6+ - Recursos Modernos que Todo Dev Deveria Conhecer</h3>
+                            <div class="video-meta">
+                                <span class="views">1.2M visualizações</span>
+                                <span class="upload-date">há 2 semanas</span>
+                                <span class="category">JavaScript</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="video-card featured-card" data-video-id="ZYCABdRwRNk" role="button" tabindex="0" aria-label="Assistir vídeo: Dominando os Princípios SOLID: Exemplos práticos com Java">
+                        <div class="video-thumbnail">
+                            <img src="https://img.youtube.com/vi/ZYCABdRwRNk/maxresdefault.jpg" alt="Thumbnail sobre Java" loading="lazy">
+                            <div class="video-duration">18:50</div>
+                            <div class="play-button" aria-hidden="true">▶</div>
+                        </div>
+                        <div class="video-info">
+                            <div class="channel-info">
+                                <div class="channel-avatar">SR</div>
+                                <span class="channel-name">Sandro Ramos</span>
+                            </div>
+                            <h3 class="video-title">Dominando os Princípios SOLID: Exemplos práticos com Java</h3>
+                            <div class="video-meta">
+                                <span class="views">13k visualizações</span>
+                                <span class="upload-date">há 1 ano</span>
+                                <span class="category">Java</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="categories" class="categories-section">
+            <div class="container">
+                <h2 class="section-title">📚 Categorias</h2>
+                <div class="categories-grid">
+                    <div class="category-card" id="programming">
+                        <div class="category-icon">💻</div>
+                        <h3>Programação</h3>
+                        <p>Algoritmos, estruturas de dados e linguagens</p>
+                        <span class="video-count">324 vídeos</span>
+                    </div>
+                    <div class="category-card" id="webdev">
+                        <div class="category-icon">🌐</div>
+                        <h3>Desenvolvimento Web</h3>
+                        <p>Frontend, backend e frameworks modernos</p>
+                        <span class="video-count">256 vídeos</span>
+                    </div>
+                    <div class="category-card" id="mobile">
+                        <div class="category-icon">📱</div>
+                        <h3>Mobile</h3>
+                        <p>React Native, Flutter, Swift e Kotlin</p>
+                        <span class="video-count">189 vídeos</span>
+                    </div>
+                    <div class="category-card" id="devops">
+                        <div class="category-icon">⚙️</div>
+                        <h3>DevOps</h3>
+                        <p>Deploy, CI/CD, Docker e Cloud</p>
+                        <span class="video-count">145 vídeos</span>
+                    </div>
+                    <div class="category-card" id="ai">
+                        <div class="category-icon">🤖</div>
+                        <h3>IA & Machine Learning</h3>
+                        <p>Python, TensorFlow e algoritmos de ML</p>
+                        <span class="video-count">98 vídeos</span>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon">🔒</div>
+                        <h3>Segurança</h3>
+                        <p>Cybersecurity e boas práticas</p>
+                        <span class="video-count">67 vídeos</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="recent" class="recent-section">
+            <div class="container">
+                <h2 class="section-title">🕒 Adicionados Recentemente</h2>
+                <div class="video-grid">
+                    <article class="video-card" data-video-id="lRWf4WjfsVI" role="button" tabindex="0" aria-label="Assistir vídeo: React Hooks - useEffect, useState e Custom Hooks">
+                        <div class="video-thumbnail">
+                            <img src="https://img.youtube.com/vi/lRWf4WjfsVI/maxresdefault.jpg" alt="React Hooks" loading="lazy">
+                            <div class="video-duration">22:15</div>
+                            <div class="play-button" aria-hidden="true">▶</div>
+                        </div>
+                        <div class="video-info">
+                            <div class="channel-info">
+                                <div class="channel-avatar">RC</div>
+                                <span class="channel-name">Rocketseat</span>
+                            </div>
+                            <h3 class="video-title">Duas regras que você precisa cumprir com hooks no React</h3>
+                            <div class="video-meta">
+                                <span class="views">432K visualizações</span>
+                                <span class="upload-date">há 3 dias</span>
+                                <span class="category">React</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="video-card" data-video-id="pQN-pnXPaVg" role="button" tabindex="0" aria-label="Assistir vídeo: HTML Full Course - Build a Website Tutorial">
+                        <div class="video-thumbnail">
+                            <img src="https://img.youtube.com/vi/pQN-pnXPaVg/maxresdefault.jpg" alt="HTML Full Course - Build a Website Tutorial" loading="lazy">
+                            <div class="video-duration">35:42</div>
+                            <div class="play-button" aria-hidden="true">▶</div>
+                        </div>
+                        <div class="video-info">
+                            <div class="channel-info">
+                                <div class="channel-avatar">FC</div>
+                                <span class="channel-name">FreeCodeCamp.org</span>
+                            </div>
+                            <h3 class="video-title">HTML Full Course - Build a Website Tutorial/h3>
+                            <div class="video-meta">
+                                <span class="views">298K visualizações</span>
+                                <span class="upload-date">há 5 dias</span>
+                                <span class="category">HTML</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="video-card" data-video-id="QmRbcU2OwrM" role="button" tabindex="0" aria-label="Assistir vídeo: Vue.js 3 - Composition API e Novidades">
+                        <div class="video-thumbnail">
+                            <img src="https://img.youtube.com/vi/QmRbcU2OwrM/maxresdefault.jpg" alt="Vue.js 3" loading="lazy">
+                            <div class="video-duration">28:33</div>
+                            <div class="play-button" aria-hidden="true">▶</div>
+                        </div>
+                        <div class="video-info">
+                            <div class="channel-info">
+                                <div class="channel-avatar">CF</div>
+                                <span class="channel-name">Clube Full-Stack</span>
+                            </div>
+                            <h3 class="video-title">Vue.js 3 - Composition API e Novidades</h3>
+                            <div class="video-meta">
+                                <span class="views">156K visualizações</span>
+                                <span class="upload-date">há 1 semana</span>
+                                <span class="category">Vue</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="video-card" data-video-id="fqMOX6JJhGo" role="button" tabindex="0" aria-label="Assistir vídeo: Kubernetes do Zero - Orquestração de Containers">
+                        <div class="video-thumbnail">
+                            <img src="https://img.youtube.com/vi/fqMOX6JJhGo/maxresdefault.jpg" alt="Kubernetes" loading="lazy">
+                            <div class="video-duration">42:18</div>
+                            <div class="play-button" aria-hidden="true">▶</div>
+                        </div>
+                        <div class="video-info">
+                            <div class="channel-info">
+                                <div class="channel-avatar">K8</div>
+                                <span class="channel-name">KubeDev</span>
+                            </div>
+                            <h3 class="video-title">Kubernetes do Zero - Orquestração de Containers</h3>
+                            <div class="video-meta">
+                                <span class="views">201K visualizações</span>
+                                <span class="upload-date">há 4 dias</span>
+                                <span class="category">DevOps</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="channels" class="channels-section">
+            <div class="container">
+                <h2 class="section-title">📺 Canais em Destaque</h2>
+                <div class="channels-grid">
+                    <div class="channel-card">
+                        <div class="channel-banner">
+                            <div class="channel-avatar large">CF</div>
+                        </div>
+                        <div class="channel-info">
+                            <h3>Código Fonte TV</h3>
+                            <p>Gabriel Fröhlich e Vanessa Weber compartilham conhecimento sobre desenvolvimento</p>
+                            <div class="channel-stats">
+                                <span>1.2M inscritos</span>
+                                <span>245 vídeos</span>
+                            </div>
+                            <button class="follow-btn">Seguir</button>
+                        </div>
+                    </div>
+
+                    <div class="channel-card">
+                        <div class="channel-banner">
+                            <div class="channel-avatar large">RS</div>
+                        </div>
+                        <div class="channel-info">
+                            <h3>Rocketseat</h3>
+                            <p>Educação em programação para quem não quer ficar para trás</p>
+                            <div class="channel-stats">
+                                <span>890K inscritos</span>
+                                <span>412 vídeos</span>
+                            </div>
+                            <button class="follow-btn">Seguir</button>
+                        </div>
+                    </div>
+
+                    <div class="channel-card">
+                        <div class="channel-banner">
+                            <div class="channel-avatar large">FB</div>
+                        </div>
+                        <div class="channel-info">
+                            <h3>Filipe Deschamps</h3>
+                            <p>Programação e carreira em tecnologia de forma prática</p>
+                            <div class="channel-stats">
+                                <span>756K inscritos</span>
+                                <span>189 vídeos</span>
+                            </div>
+                            <button class="follow-btn">Seguir</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><span class="logo-icon">⚡</span>AgregaTech</h3>
+                    <p>Conectando desenvolvedores ao melhor conteúdo de tecnologia</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Twitter">🐦</a>
+                        <a href="#" aria-label="LinkedIn">💼</a>
+                        <a href="#" aria-label="GitHub">🐙</a>
+                        <a href="#" aria-label="Discord">💬</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Categorias</h4>
+                    <ul>
+                        <li><a href="#programming">Programação</a></li>
+                        <li><a href="#webdev">Web Development</a></li>
+                        <li><a href="#mobile">Mobile</a></li>
+                        <li><a href="#devops">DevOps</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Recursos</h4>
+                    <ul>
+                        <li><a href="#">API</a></li>
+                        <li><a href="#">Newsletter</a></li>
+                        <li><a href="#">Favoritos</a></li>
+                        <li><a href="#">Histórico</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Suporte</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Contato</a></li>
+                        <li><a href="#">Feedback</a></li>
+                        <li><a href="#">Reportar Bug</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 AgregaTech. Feito com ❤️ para a comunidade dev brasileira.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal de Vídeo -->
+    <div id="video-modal" class="video-modal" role="dialog" aria-labelledby="video-modal-title" aria-modal="true" aria-hidden="true">
+        <div class="video-modal-overlay" aria-label="Fechar modal"></div>
+        <div class="video-modal-content">
+            <div class="video-modal-header">
+                <h2 id="video-modal-title" class="video-modal-title">Reproduzindo Vídeo</h2>
+                <button class="video-modal-close" aria-label="Fechar modal de vídeo" type="button">✕</button>
+            </div>
+            <div class="video-modal-body">
+                <div class="video-container">
+                    <iframe 
+                        id="youtube-player"
+                        width="100%" 
+                        height="100%" 
+                        src="" 
+                        title="Player de vídeo do YouTube"
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="video-details">
+                    <div class="video-channel">
+                        <div class="channel-avatar-large" id="modal-channel-avatar"></div>
+                        <div class="channel-info-modal">
+                            <h3 id="modal-channel-name"></h3>
+                            <p id="modal-video-title"></p>
+                        </div>
+                    </div>
+                    <div class="video-actions">
+                        <button class="action-btn like-btn" aria-label="Curtir vídeo">👍 <span>Curtir</span></button>
+                        <button class="action-btn share-btn" aria-label="Compartilhar vídeo">🔗 <span>Compartilhar</span></button>
+                        <button class="action-btn save-btn" aria-label="Salvar para assistir depois">💾 <span>Salvar</span></button>
+                        <button class="action-btn fullscreen-btn" aria-label="Modo tela cheia">⛶ <span>Tela Cheia</span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Funcionalidade básica para navegação suave
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Ativação de links de navegação
+        const navLinks = document.querySelectorAll('.nav-link');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                navLinks.forEach(l => l.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        // Funcionalidade de busca simples
+        const searchInput = document.querySelector('input[type="search"]');
+        const searchButton = document.querySelector('.search-bar button');
+        
+        function performSearch() {
+            const query = searchInput.value.trim();
+            if (query) {
+                alert(`Buscando por: "${query}"\n(Funcionalidade seria implementada com backend)`);
+            }
+        }
+
+        searchButton.addEventListener('click', performSearch);
+        searchInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                performSearch();
+            }
+        });
+
+        // ===== FUNCIONALIDADE DO MODAL DE VÍDEO =====
+        
+        const videoModal = document.getElementById('video-modal');
+        const youtubePlayer = document.getElementById('youtube-player');
+        const modalOverlay = document.querySelector('.video-modal-overlay');
+        const modalCloseBtn = document.querySelector('.video-modal-close');
+        const modalTitle = document.getElementById('video-modal-title');
+        const modalChannelName = document.getElementById('modal-channel-name');
+        const modalVideoTitle = document.getElementById('modal-video-title');
+        const modalChannelAvatar = document.getElementById('modal-channel-avatar');
+
+        // Mock dos Dados dos vídeos
+        const videoData = {
+            'c8mVlakBESE': {
+                title: 'JavaScript ES6+ - Recursos Modernos que Todo Dev Deveria Conhecer',
+                channel: 'Código Fonte TV',
+                avatar: 'JS'
+            },
+            'ZYCABdRwRNk': {
+                title: 'Dominando os Princípios SOLID: Exemplos práticos com Java',
+                channel: 'Sandro Ramos',
+                avatar: 'SR'
+            },
+            'lRWf4WjfsVI': {
+                title: 'Duas regras que você precisa cumprir com hooks no React',
+                channel: 'Rocketseat',
+                avatar: 'RC'
+            },
+            'pQN-pnXPaVg': {
+                title: 'HTML Full Course - Build a Website Tutorial',
+                channel: 'FreeCodeCamp.org',
+                avatar: 'PY'
+            },
+            'QmRbcU2OwrM': {
+                title: 'Vue.js 3 - Composition API e Novidades',
+                channel: 'Clube Full-Stack',
+                avatar: 'CF'
+            },
+            'fqMOX6JJhGo': {
+                title: 'Kubernetes do Zero - Orquestração de Containers',
+                channel: 'KubeDev',
+                avatar: 'K8'
+            }
+        };
+
+        // Função para abrir o modal de vídeo
+        function openVideoModal(videoId, videoInfo) {
+            const embedUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1`;
+            
+            youtubePlayer.src = embedUrl;
+            modalTitle.textContent = `Reproduzindo: ${videoInfo.title}`;
+            modalChannelName.textContent = videoInfo.channel;
+            modalVideoTitle.textContent = videoInfo.title;
+            modalChannelAvatar.textContent = videoInfo.avatar;
+            
+            videoModal.classList.add('active');
+            videoModal.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
+            
+            // Focus no botão de fechar para acessibilidade
+            modalCloseBtn.focus();
+        }
+
+        // Função para fechar o modal de vídeo
+        function closeVideoModal() {
+            youtubePlayer.src = '';
+            videoModal.classList.remove('active');
+            videoModal.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Event listeners para os cards de vídeo
+        document.querySelectorAll('[data-video-id]').forEach(card => {
+            // Click event
+            card.addEventListener('click', function() {
+                const videoId = this.getAttribute('data-video-id');
+                const videoInfo = videoData[videoId];
+                if (videoInfo) {
+                    openVideoModal(videoId, videoInfo);
+                }
+            });
+
+            // Keyboard accessibility
+            card.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    const videoId = this.getAttribute('data-video-id');
+                    const videoInfo = videoData[videoId];
+                    if (videoInfo) {
+                        openVideoModal(videoId, videoInfo);
+                    }
+                }
+            });
+        });
+
+        // Event listeners para fechar o modal
+        modalCloseBtn.addEventListener('click', closeVideoModal);
+        modalOverlay.addEventListener('click', closeVideoModal);
+
+        // Fechar modal com ESC
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && videoModal.classList.contains('active')) {
+                closeVideoModal();
+            }
+        });
+
+        // Funcionalidades dos botões de ação do modal
+        document.querySelector('.like-btn').addEventListener('click', function() {
+            this.classList.toggle('active');
+            const span = this.querySelector('span');
+            span.textContent = this.classList.contains('active') ? 'Curtido' : 'Curtir';
+        });
+
+        document.querySelector('.share-btn').addEventListener('click', function() {
+            if (navigator.share) {
+                navigator.share({
+                    title: modalVideoTitle.textContent,
+                    text: `Confira este vídeo: ${modalVideoTitle.textContent}`,
+                    url: youtubePlayer.src.replace('/embed/', '/watch?v=').split('?')[0]
+                });
+            } else {
+                // Fallback para browsers que não suportam Web Share API
+                const url = youtubePlayer.src.replace('/embed/', '/watch?v=').split('?')[0];
+                navigator.clipboard.writeText(url).then(() => {
+                    alert('Link copiado para a área de transferência!');
+                });
+            }
+        });
+
+        document.querySelector('.save-btn').addEventListener('click', function() {
+            this.classList.toggle('active');
+            const span = this.querySelector('span');
+            span.textContent = this.classList.contains('active') ? 'Salvo' : 'Salvar';
+            
+            // Simular salvamento no localStorage
+            const videoId = youtubePlayer.src.match(/embed\/([^?]+)/)?.[1];
+            if (videoId) {
+                let savedVideos = JSON.parse(localStorage.getItem('savedVideos') || '[]');
+                if (this.classList.contains('active')) {
+                    if (!savedVideos.includes(videoId)) {
+                        savedVideos.push(videoId);
+                    }
+                } else {
+                    savedVideos = savedVideos.filter(id => id !== videoId);
+                }
+                localStorage.setItem('savedVideos', JSON.stringify(savedVideos));
+            }
+        });
+
+        document.querySelector('.fullscreen-btn').addEventListener('click', function() {
+            const iframe = youtubePlayer;
+            if (iframe.requestFullscreen) {
+                iframe.requestFullscreen();
+            } else if (iframe.webkitRequestFullscreen) {
+                iframe.webkitRequestFullscreen();
+            } else if (iframe.mozRequestFullScreen) {
+                iframe.mozRequestFullScreen();
+            } else if (iframe.msRequestFullscreen) {
+                iframe.msRequestFullscreen();
+            }
+        });
+
+        // Inicializar vídeos salvos ao carregar a página
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedVideos = JSON.parse(localStorage.getItem('savedVideos') || '[]');
+            // Aqui você poderia marcar os vídeos salvos na interface
+            console.log('Vídeos salvos:', savedVideos);
+        });
+
+        // Melhorar acessibilidade com foco trap no modal
+        let focusableElements = [];
+        let firstFocusableElement;
+        let lastFocusableElement;
+
+        function trapFocus(e) {
+            if (e.key === 'Tab') {
+                if (e.shiftKey) {
+                    if (document.activeElement === firstFocusableElement) {
+                        lastFocusableElement.focus();
+                        e.preventDefault();
+                    }
+                } else {
+                    if (document.activeElement === lastFocusableElement) {
+                        firstFocusableElement.focus();
+                        e.preventDefault();
+                    }
+                }
+            }
+        }
+
+        // Atualizar elementos focáveis quando o modal abrir
+        videoModal.addEventListener('transitionend', function() {
+            if (this.classList.contains('active')) {
+                focusableElements = this.querySelectorAll(
+                    'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+                );
+                firstFocusableElement = focusableElements[0];
+                lastFocusableElement = focusableElements[focusableElements.length - 1];
+                document.addEventListener('keydown', trapFocus);
+            } else {
+                document.removeEventListener('keydown', trapFocus);
+            }
+        });
+    </script>
+</body>
+
+</html>
