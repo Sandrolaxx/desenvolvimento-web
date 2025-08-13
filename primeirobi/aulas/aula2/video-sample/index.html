@@ -87,6 +87,30 @@
                             </div>
                         </div>
                     </article>
+
+                    <article class="video-card featured-card" data-video-id="tag-video" role="button" tabindex="0" aria-label="Vídeo bizarro do coelho da Google">
+                        <div class="video-thumbnail">
+                            <video class="thumbnail-video" muted preload="metadata">
+                                <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
+                                <div class="placeholder-video">Vídeo bizarro do coelho da Google</div>
+                            </video>
+                            <div class="video-duration">9:56</div>
+                            <div class="play-button" aria-hidden="true">▶</div>
+                        </div>
+                        <div class="video-info">
+                            <div class="channel-info">
+                                <div class="channel-avatar">GG</div>
+                                <span class="channel-name">Google</span>
+                            </div>
+                            <h3 class="video-title">Vídeo bizarro do coelho da Google</h3>
+                            <div class="video-meta">
+                                <span class="views">13k visualizações</span>
+                                <span class="upload-date">há 1 ano</span>
+                                <span class="category">Bizarro</span>
+                            </div>
+                        </div>
+                    </article>
+
                 </div>
             </div>
         </section>
@@ -446,12 +470,21 @@
                 title: 'Kubernetes do Zero - Orquestração de Containers',
                 channel: 'KubeDev',
                 avatar: 'K8'
+            },
+            'tag-video': {
+                title: 'Video bizarro do coelho da Google',
+                channel: 'Google',
+                avatar: 'GG'
             }
         };
 
         // Função para abrir o modal de vídeo
         function openVideoModal(videoId, videoInfo) {
-            const embedUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1`;
+            let embedUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1`;
+           
+            if (videoId === 'tag-video') {
+                embedUrl = "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4";
+            }
             
             youtubePlayer.src = embedUrl;
             modalTitle.textContent = `Reproduzindo: ${videoInfo.title}`;
