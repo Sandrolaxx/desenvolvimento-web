@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia Visual de CSS: Flexbox & Grid</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Source+Code+Pro&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <h1>Guia Visual - Encontro 4: Construindo Layouts Responsivos</h1>
+        <p>Uma demonstração interativa dos conceitos de CSS moderno.</p>
+    </header>
+
+    <main>
+        <section id="posicionamento">
+            <h2>Posicionamento (position) e z-index</h2>
+            <div class="container position-container">
+                <div class="box static">static (padrão)</div>
+                <div class="box relative">relative
+                    <div class="box absolute">absolute (filho)</div>
+                </div>
+                <div class="box z-index-1">z-index: 1</div>
+                <div class="box z-index-2">z-index: 2</div>
+            </div>
+            <div class="box fixed">fixed (fixo na tela)</div>
+        </section>
+
+        <section id="dimensionamento-overflow">
+            <h2>Dimensionamento e Transbordamento (Overflow)</h2>
+            <div class="container sizing-container">
+                <div class="box resizable">
+                    <code>min-width: 150px</code><br>
+                    <code>max-width: 300px</code><br>
+                    (Redimensione a janela)
+                </div>
+                <div class="box overflow-box">
+                    <p>Esta caixa tem muito conteúdo para seu tamanho fixo. A propriedade <code>overflow: scroll;</code> adiciona barras de rolagem para que você possa ver todo o texto sem quebrar o layout da página. Experimente rolar!</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="efeitos-visuais">
+            <h2>Efeitos Visuais e Transições</h2>
+            <div class="container">
+                <div class="box effect-box">
+                    Passe o mouse aqui!
+                </div>
+            </div>
+        </section>
+
+        <section id="unidades">
+            <h2>Unidades de Medida</h2>
+            <div class="container units-container">
+                <div class="unit-px">200px (Absoluto)</div>
+                <div class="unit-percent">50% (Relativo ao pai)</div>
+                <div class="parent-font">
+                    Pai (font-size: 20px)
+                    <div class="unit-em">2em (40px)</div>
+                </div>
+                <div class="unit-rem">10rem (Relativo à raiz - 160px)</div>
+                <div class="unit-vw">50vw (Metade da largura da tela)</div>
+                <div class="unit-vh">10vh (10% da altura da tela)</div>
+            </div>
+        </section>
+
+        <section id="flexbox">
+            <h2>1. Flexbox: Layouts em Uma Dimensão</h2>
+            <h3>justify-content: space-around</h3>
+            <div class="container flex-container justify-around">
+                <div class="box flex-item">1</div>
+                <div class="box flex-item">2</div>
+                <div class="box flex-item">3</div>
+            </div>
+            <h3>align-items: center</h3>
+            <div class="container flex-container align-center">
+                <div class="box flex-item">1</div>
+                <div class="box flex-item" style="font-size: 0.8rem;">2</div>
+                <div class="box flex-item">3</div>
+            </div>
+            <h3>flex-wrap: wrap</h3>
+            <div class="container flex-container flex-wrap">
+                <div class="box flex-item">Item 1</div>
+                <div class="box flex-item">Item 2</div>
+                <div class="box flex-item">Item 3</div>
+                <div class="box flex-item">Item 4</div>
+                <div class="box flex-item">Item 5</div>
+            </div>
+            <h3>flex-grow em um item</h3>
+             <div class="container flex-container">
+                <div class="box flex-item">1</div>
+                <div class="box flex-item grow">2 (grow: 1)</div>
+                <div class="box flex-item">3</div>
+            </div>
+        </section>
+        
+        <section id="css-grid">
+            <h2>2. CSS Grid: Layouts em Duas Dimensões</h2>
+            <div class="container grid-container">
+                <div class="box grid-item">1</div>
+                <div class="box grid-item">2</div>
+                <div class="box grid-item">3</div>
+                <div class="box grid-item span-two">4 (Ocupa 2 colunas)</div>
+                <div class="box grid-item">5</div>
+            </div>
+        </section>
+
+        <section id="grid-vs-flexbox">
+            <h2>3. Grid para MACRO, Flexbox para MICRO</h2>
+            <div class="page-layout">
+                <header class="layout-header">
+                    <nav class="main-nav">
+                        <a href="#">Home</a>
+                        <a href="#">Sobre</a>
+                        <a href="#">Contato</a>
+                    </nav>
+                </header>
+                <main class="layout-main">Conteúdo Principal</main>
+                <aside class="layout-sidebar">Barra Lateral</aside>
+                <footer class="layout-footer">Rodapé</footer>
+            </div>
+        </section>
+
+    </main>
+
+</body>
+</html>
