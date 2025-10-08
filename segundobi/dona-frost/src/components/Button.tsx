@@ -1,4 +1,4 @@
-import "../styles/Button.css";
+import "../styles/button.css";
 
 interface IButtonProps {
     text: string;

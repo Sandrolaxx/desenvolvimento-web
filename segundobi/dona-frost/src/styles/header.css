@@ -15,6 +15,16 @@
   z-index: 3;
 }
 
+.menu-icon {
+    display: flex;
+}
+
+.close-icon {
+    position: absolute;
+    left: 86%;
+    top: 4%;
+}
+
 .mobile-menu-content {
   position: absolute;
   display: flex;
