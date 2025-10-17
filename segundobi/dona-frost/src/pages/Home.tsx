@@ -3,6 +3,7 @@ import "../styles/utility.css";
 import "../styles/header.css";
 import "../styles/hero.css";
 import "../styles/solution.css";
+import "../styles/pricing.css";
 import "../styles/testimonials.css";
 import Logo from "../assets/logo.svg"
 import { useState } from "react";
@@ -18,10 +19,19 @@ import EllonMa from "../assets/images/ellon-ma.png";
 import RyanGosling from "../assets/images/ryan.png";
 import PDiddy from "../assets/images/diddy.jpg";
 import Star from "../assets/star.svg";
+import Check from "../assets/check.svg";
 import StarOuter from "../assets/starouter.svg";
 
 export function Home() {
     const [showMobileMenu, setShowMobileMenu] = useState(false);
+    const [btcAmount, setBtcAmount] = useState<number>();
+
+    function consultarBitcoin() {
+        fetch("https://economia.awesomeapi.com.br/json/last/BTC")
+            .then(res => res.json())
+            .then(json => setBtcAmount(json.BTCBRL.bid))
+            .catch(console.error)
+    }
 
     return (
         <>
@@ -322,6 +332,91 @@ export function Home() {
                         </div>
                     </div>
                 </section>
+            </section>
+            <section id="pricing" className="container">
+                <header>
+                    <p className="desktop-only">Planos e preços</p>
+                    <h2>Nossos planos</h2>
+                </header>
+                <section className="even-columns gap-1.5">
+                    <div className="pricing-card">
+                        <span className="plan">
+                            <h3>Básico</h3>
+                            <p>Você tem direito a uma prova das comidas DonaFrost.</p>
+                        </span>
+                        <h2>Grátis</h2>
+                        <Button text="Pedir agora" secondary key="free" />
+                        <span className="hr" />
+                        <span className="features">
+                            <img src={Check} alt="ícone check" width={24} height={24} />
+                            <p>Retire na loja</p>
+                        </span>
+                        <ul className="features">
+                            <img src={Check} alt="ícone check" width={24} height={24} />
+                            <p>Apenas 1 por CPF</p>
+                        </ul>
+                    </div>
+                    <div className="pricing-card premium">
+                        <span className="bonus">
+                            <p>1º MÊS COM DESCONTO</p>
+                        </span>
+                        <span className="plan">
+                            <h3>Premium</h3>
+                            <p>Para quem precisa de uma marmita diária, muito saborosa.</p>
+                        </span>
+                        <span className="price">
+                            <h2>R$ 89,90</h2>
+                            <p>/mês</p>
+                        </span>
+                        <Button text="Pedir agora" key="premium" />
+                        <span className="hr" />
+                        <span className="features">
+                            <img src={Check} alt="ícone check" width={24} height={24} />
+                            <p>2 Entregas</p>
+                        </span>
+                        <span className="features">
+                            <img src={Check} alt="ícone check" width={24} height={24} />
+                            <p>5 Refeições por semana</p>
+                        </span>
+                        <span className="features">
+                            <img src={Check} alt="ícone check" width={24} height={24} />
+                            <p>2 Sucos por semana</p>
+                        </span>
+                    </div>
+                    <div className="pricing-card">
+                        <span className="plan">
+                            <h3>Empresarial</h3>
+                            <p>Você tem direito a uma prova das comidas DonaFrost.</p>
+                        </span>
+                        <h2>12,90</h2>
+                        <Button text="Pedir agora" secondary key="free" />
+                        <span className="hr" /><span className="features">
+                            <img src={Check} alt="ícone check" width={24} height={24} />
+                            <p>Retire na loja</p>
+                        </span>
+                        <ul className="features">
+                            <img src={Check} alt="ícone check" width={24} height={24} />
+                            <p>Com anúncio</p>
+                        </ul>
+                        <ul className="features">
+                            <img src={Check} alt="ícone check" width={24} height={24} />
+                            <p>Até 10 produtos por dia</p>
+                        </ul>
+                    </div>
+                </section>
+            </section>
+            <section id="btc">
+                <h2>
+                    Valor do BTC
+                </h2>
+                {btcAmount &&
+                    <p>
+                        R$ {btcAmount}
+                    </p>
+                }
+                <span>
+                    <Button text="Consultar BitCoin" handleFunction={consultarBitcoin} />
+                </span>
             </section>
         </>
     )
