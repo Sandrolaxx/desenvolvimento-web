@@ -1,0 +1,84 @@
+* {
+    background-color: #f1f1f1;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: blue;
+    text-align: center;
+}
+
+#test {
+    color: aqua;
+}
+
+/* Exemplos seletores */
+
+#hero {
+    background-color: burlywood;
+    display: flex;
+    justify-content: center;
+}
+
+.lista {
+    font-size: 1rem;
+    list-style: none;
+}
+
+li p {
+    font-style: normal;
+}
+
+li > span > p {
+    font-style: italic;
+}
+
+li + p {
+    color: aqua;
+}
+
+li ~ p {
+    color: #f495f2;
+}
+
+button {
+    border-radius: 14px;
+    background-color: #f495f2;
+    cursor: pointer;
+    
+    p {
+        color: red;
+    }
+}
+
+.btn:hover {
+    background-color: #a5beeb79;
+}
+
+/* Estilização Box */
+
+.box1 {
+    display: flex;
+    background-color: #04c298;
+    height: 90px;
+    width: 200px;
+
+    /* margin-bottom: 20px; */
+    padding: 12px;
+
+    p {
+        background-color: red;
+    }
+}
+
+.box1inner {
+    /* display: flex; */
+    background-color: #8f6dde;
+}
+
+.box2 {
+    display: flex;
+    background-color: #35a40c;
+}
