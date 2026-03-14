@@ -1,84 +1,156 @@
+/* ============================================
+   RESET CSS - Seletor Universal (*)
+   ============================================
+   O seletor * aplica estilos a TODOS os elementos da página.
+   Aqui removemos margens e padding padrão dos navegadores
+   e aplicamos uma fonte padrão para todo o documento.
+*/
 * {
-    background-color: #f1f1f1;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
+    font-family: "Poppins";
 }
 
+/* ============================================
+   ESTILIZAÇÃO DO ELEMENTO HTML
+   ============================================
+   height: 100vh - Define altura de 100% da viewport (altura visível da janela)
+   background-color - Define cor de fundo usando RGB
+*/
+html {
+    height: 100vh;
+    background-color: rgb(249, 152, 152);
+}
+
+/* ============================================
+   SELETOR DE ID (#container)
+   ============================================
+   IDs são únicos na página e têm alta especificidade.
+   Usamos # para selecionar elementos por ID.
+   Define dimensões fixas e cor de fundo.
+*/
+#container {
+    height: 200px;
+    width: 320px;
+    background-color: azure;
+}
+
+/* ============================================
+   SELETOR DE CLASSE (.btn)
+   ============================================
+   Classes podem ser reutilizadas em múltiplos elementos.
+   Usamos . (ponto) para selecionar por classe.
+   border-radius - Cria bordas arredondadas (círculos ou elipses)
+*/
+.btn {
+    width: 86px;
+    height: 24px;
+    border-radius: 20px;
+}
+
+/* ============================================
+   PSEUDO-CLASSE :hover
+   ============================================
+   :hover aplica estilos quando o mouse está sobre o elemento.
+   cursor: pointer - Muda o cursor para indicar que é clicável
+   box-shadow - Cria sombras múltiplas para efeito 3D
+   Sintaxe: offset-x offset-y blur-radius spread-radius color
+*/
+.btn:hover {
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+/* ============================================
+   SELETOR DE ELEMENTO (h1)
+   ============================================
+   Seleciona TODOS os elementos h1 da página.
+   text-decoration - Adiciona decoração ao texto (underline, line-through, etc)
+*/
 h1 {
-    color: blue;
+    text-decoration: underline;
+}
+
+/* ============================================
+   COMBINADOR DE IRMÃOS GERAIS (~)
+   ============================================
+   Sintaxe: A ~ B
+   Seleciona todos os elementos B que são irmãos posteriores de A
+   (mesmo nível na hierarquia, mas não necessariamente adjacentes).
+   Aqui: seleciona todos os <p> que vêm depois de qualquer <div>
+*/
+div ~ p {
+    color: brown;
+    font-weight: bold;
     text-align: center;
 }
 
-#test {
-    color: aqua;
+/* ============================================
+   ESTILIZAÇÃO DE INPUT POR CLASSE
+   ============================================
+   border - Define espessura, estilo e cor da borda
+   Sintaxe: largura estilo cor
+*/
+.input-name {
+    border: 2px solid rgb(2, 105, 216);
 }
 
-/* Exemplos seletores */
-
-#hero {
-    background-color: burlywood;
-    display: flex;
-    justify-content: center;
+/* ============================================
+   PSEUDO-CLASSE :focus
+   ============================================
+   :focus aplica estilos quando o elemento está com foco
+   (geralmente ao clicar ou usar Tab para navegar)
+   Muito usado em inputs e elementos interativos
+*/
+.input-name:focus {
+    background-color: rgb(17, 143, 197);
 }
 
-.lista {
-    font-size: 1rem;
-    list-style: none;
+/* ============================================
+   BOX MODEL COMPLETO
+   ============================================
+   Demonstra o modelo de caixa CSS:
+   - Content (width/height)
+   - Padding (espaçamento interno)
+   - Border (borda)
+   - Margin (espaçamento externo - não usado aqui)
+   
+   padding: top right bottom left (sentido horário)
+   box-sizing: border-box - Faz width/height incluírem padding e border
+   (por padrão, padding e border são ADICIONADOS ao width/height)
+*/
+#section-dois {
+    height: 200px;
+    width: 320px;
+    padding: 14px 8px 12px 5px;
+    box-sizing: border-box;
+    border: 6px solid red;
+    background-color: rgb(28, 176, 176);
 }
 
-li p {
-    font-style: normal;
+/* ============================================
+   DISPLAY: BLOCK
+   ============================================
+   Elementos block ocupam toda a largura disponível e
+   começam em uma nova linha (empurram outros elementos para baixo).
+   Exemplos naturais: div, p, h1, section
+*/
+.display-block {
+    background-color: blanchedalmond;
 }
 
-li > span > p {
-    font-style: italic;
-}
-
-li + p {
-    color: aqua;
-}
-
-li ~ p {
-    color: #f495f2;
-}
-
-button {
-    border-radius: 14px;
-    background-color: #f495f2;
-    cursor: pointer;
-    
-    p {
-        color: red;
-    }
-}
-
-.btn:hover {
-    background-color: #a5beeb79;
-}
-
-/* Estilização Box */
-
-.box1 {
-    display: flex;
-    background-color: #04c298;
-    height: 90px;
-    width: 200px;
-
-    /* margin-bottom: 20px; */
-    padding: 12px;
-
-    p {
-        background-color: red;
-    }
-}
-
-.box1inner {
-    /* display: flex; */
-    background-color: #8f6dde;
-}
-
-.box2 {
-    display: flex;
-    background-color: #35a40c;
+/* ============================================
+   DISPLAY: INLINE
+   ============================================
+   Elementos inline ficam na mesma linha e ocupam apenas
+   o espaço do seu conteúdo. NÃO respeitam width/height.
+   Exemplos naturais: span, a, strong, em
+   
+   display: none - Remove completamente o elemento do layout
+   (não ocupa espaço, diferente de visibility: hidden)
+*/
+.display-inline {
+    /* display: none; */
+    width: 100px;
+    background-color: rgb(81, 245, 114);
 }

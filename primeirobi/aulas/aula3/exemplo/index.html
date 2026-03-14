@@ -1,66 +1,156 @@
+<!-- 
+    ============================================
+    DECLARAÇÃO DOCTYPE
+    ============================================
+    Define que o documento usa HTML5
+-->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
+    <!-- 
+        ============================================
+        META TAGS
+        ============================================
+        charset: Define a codificação de caracteres (UTF-8 suporta acentos e caracteres especiais)
+        viewport: Controla como a página é exibida em dispositivos móveis
+    -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!-- Primeira forma -->
-    <link rel="stylesheet" href="style.css">
-    <!-- Segunda forma -->
+    <title>Exemplos CSS</title>
+    
+    <!-- 
+        ============================================
+        GOOGLE FONTS
+        ============================================
+        preconnect: Estabelece conexão antecipada com o servidor de fontes
+        para melhorar a performance
+    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    
+    <!-- 
+        ============================================
+        FORMAS DE APLICAR CSS
+        ============================================
+        1. CSS INLINE: Aplicado diretamente no elemento via atributo style (veja h1 abaixo)
+        2. CSS INTERNO: Dentro da tag <style> no head (comentado abaixo)
+        3. CSS EXTERNO: Arquivo separado linkado (style.css)
+    -->
     <!-- <style>
-        h1 {
-            color: blue;
-            text-align: center;
+        html {
+            height: 100vh;
+            background-color: rgb(249, 152, 152);
         }
     </style> -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <!-- 
+        ============================================
+        ELEMENTOS SEMÂNTICOS
+        ============================================
+        <main> e <section> são elementos semânticos do HTML5
+        que ajudam na estruturação e acessibilidade
+    -->
     <main>
-        <!-- Terceira forma -->
-        <h1 style="color: blueviolet; text-align: center;">Teste show</h1>
-        <h1>Teste 2</h1>
-        <h1 id="test">Teste id</h1>
-        <section id="hero">
-            <ul class="lista">
-                <li>
-                    <p>Item 1</p>
-                    <span>
-                        <p>Item 1.1</p>
-                    </span>
-                    <span>
-                        <p>Item 1.1</p>
-                    </span>
-                </li>
-                <li>
-                    <p>Item 2.2</p>
-                </li>
-                <p>Item 2</p>
-                <li>
-                    <p>Item 3</p>
-                </li>
-                <p>Item 2</p>
-            </ul>
-            <button class="btn">
-                <p>
-                    Click aqui
-                </p>
-            </button>
+        <!-- 
+            ============================================
+            SELETOR DE ID
+            ============================================
+            id="container" - Identificador único na página
+            Estilizado em style.css usando #container
+        -->
+        <section id="container">
+            <!-- 
+                ============================================
+                CSS INLINE
+                ============================================
+                Estilo aplicado diretamente no elemento
+                Tem a MAIOR especificidade (sobrescreve classes e IDs do CSS externo)
+            -->
+            <h1 style="font-size: 40px; 
+            color: rgb(10, 84, 149);">Exemplo Texto</h1>
+            
+            <!-- 
+                ============================================
+                SELETOR DE CLASSE
+                ============================================
+                class="btn" - Pode ser reutilizada em múltiplos elementos
+                Estilizada em style.css usando .btn e .btn:hover
+            -->
+            <button class="btn">Clique Aqui</button>
+            
+            <!-- 
+                ============================================
+                DEMONSTRAÇÃO DO COMBINADOR SIBLING (~)
+                ============================================
+                Esta div tem parágrafos internos
+                Os parágrafos APÓS esta div (como irmãos) serão afetados
+                pela regra "div ~ p" do CSS
+            -->
+            <div>
+                <p>Texto Show</p>
+                <span>
+                    <p>Texto Show 2</p>
+                </span>
+            </div>
+            
+            <!-- 
+                ============================================
+                IRMÃOS DA DIV
+                ============================================
+                Estes <p> estão no mesmo nível da <div> acima
+                Por isso, recebem os estilos de "div ~ p"
+                (cor marrom, negrito, texto centralizado)
+            -->
+            <p>Texto Show 3</p>
+            <p>Texto Show 4</p>
         </section>
-        <section>
-            <div class="box1">
-                <!-- <div class="box1inner"> -->
-                    <p>
-                        CAIXA 1
-                    </p>
-                <!-- </div> -->
+        
+        <!-- 
+            ============================================
+            SEGUNDA SEÇÃO - BOX MODEL
+            ============================================
+            Demonstra padding, border e box-sizing
+        -->
+        <section id="section-dois">
+            <!-- 
+                ============================================
+                FORMULÁRIO E PSEUDO-CLASSE :focus
+                ============================================
+                O input com classe "input-name" muda de cor ao receber foco
+            -->
+            <div>
+                <label for="nome">Nome</label>
+                <input class="input-name" type="text">
             </div>
-            <div class="box2">
-                <p>
-                    CAIXA 2
-                </p>
+            
+            <!-- 
+                ============================================
+                DISPLAY: BLOCK
+                ============================================
+                <div> naturalmente tem display: block
+                Ocupa toda a largura disponível e quebra linha
+            -->
+            <div class="display-block">
+                <p>Div - Display Block</p>
             </div>
+            
+            <!-- 
+                ============================================
+                DISPLAY: INLINE
+                ============================================
+                <span> naturalmente tem display: inline
+                Fica na mesma linha e não respeita width/height
+            -->
+            <span class="display-inline">
+                Display Inline
+            </span>
         </section>
     </main>
 </body>
