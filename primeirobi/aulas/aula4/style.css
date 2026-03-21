@@ -54,7 +54,7 @@
   width: 120px;
   height: 120px;
   background-color: rgba(23, 162, 184, 0.7);
-  z-index: 2;
+  z-index: 4;
 }
 .fixed {
   position: fixed;
@@ -156,7 +156,7 @@
   flex-basis: 100px;
 }
 .justify-around {
-  justify-content: space-around;
+  justify-content: space-between;
 }
 .align-center {
   align-items: center;
