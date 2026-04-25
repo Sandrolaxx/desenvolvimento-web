@@ -1,4 +1,4 @@
-# Web - Eng Software 2025
+# Web - Eng Software 2026 - Segundo Semestre
 
 Repositório com exemplos de código criados em sala.
 
