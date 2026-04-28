@@ -6,9 +6,20 @@
 #home {
     background-color: aliceblue;
     width: 200px;
+    margin-left: 45%;
     height: 200px;
     padding: 20px;
+    /* box-sizing: content-box; */
     box-sizing: border-box;
+}
+
+#imagem {
+    height: 200px;
+    width: 200px;
+    /* display: none; */
+    /* background-repeat: repeat; */
+    background-size: cover;
+    background-image: url("https://img.olympics.com/images/image/private/t_s_16_9_g_auto/t_s_w1460/f_auto/primary/dhlronz2c4rsv9ey4nad");
 }
 
 h1 {

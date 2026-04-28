@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  background-color: bisque;
+  overflow-x: hidden;
+}
+
+.relative {
+  width: 200px;
+  height: 200px;
+  background-color: blue;
+  border: solid white 12px;
+  /* position: relative; */
+  border-radius: 10%;
+  margin-bottom: 20px;
+  box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+}
+
+.absolute {
+  width: 200px;
+  height: 200px;
+  background-color: rgb(96, 245, 41);
+  border: solid white 12px;
+  position: absolute;
+  border-radius: 30%;
+  /* top: 0; */
+  /* bottom: 0; */
+  right: 0;
+  /* z-index: 1; */
+}
+
+.fixed {
+  width: 200px;
+  height: 200px;
+  background-color: rgb(248, 194, 30);
+  border: solid white 12px;
+  position: fixed;
+  opacity: 20%;
+  transition: 1s linear;
+  /* top: 0; */
+  /* bottom: 0; */
+  right: 50%;
+}
+
+.fixed:hover {
+    opacity: 80%;
+    width: 400px;
+}

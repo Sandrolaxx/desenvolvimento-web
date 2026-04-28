@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    height: 100vh;
+    background-color: gray;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    /* flex-direction: column; */
+    /* justify-content: space-between; */
+    /* align-items: center; */
+    /* justify-content: center; */
+}
+
+.caixa {
+    width: 60px;
+    height: 60px;
+    background-color: red;
+    border: black solid 4px;
+}
