@@ -1,18 +1,30 @@
+import { useState } from "react";
 import "./App.css";
 import Cabecalho from "./components/Cabecalho";
 import Post from "./components/Post";
 
 export default function App() {
-    var contador = 0;
-    var nome = "Sandro Ramos"
+    const [contador, setContador] = useState(0);
+    const nome = "Sandro Ramos"
+    const [ativo, setAtivo] = useState(false);
+
+    function incrementar() {
+        setContador(contador + 2);
+    }
 
     return (
         <>
-            <Cabecalho />
+            <Cabecalho texto="Cabeçalho Show" />
             <div>
-                <h1 className="title">Hello World!🌎</h1>
+                <h1 className={`${ativo ? "ativo" : "inativo"}`}>Hello World!🌎</h1>
                 <p>Aluno {nome}</p>
                 <h2>Valor contador: {contador}</h2>
+                <button onClick={incrementar}>
+                    Incrementar
+                </button>
+                <button onClick={() => setAtivo(!ativo)}>
+                    Mudar Cor
+                </button>
                 <section>
                     <h1>Últimos posts</h1>
                     <Post

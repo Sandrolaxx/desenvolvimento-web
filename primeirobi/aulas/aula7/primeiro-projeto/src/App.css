@@ -1,3 +1,11 @@
 .title {
     color: blue;
 }
+
+.ativo {
+    color: green;
+}
+
+.inativo {
+    color: red;
+}
