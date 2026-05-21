@@ -98,7 +98,7 @@ export default function Home() {
                         Olá
                     </p>
                     <h1>
-                        Uma solução que irá te entregar X
+                        Brasil Hexa!
                     </h1>
                     <p>
                         Você sabe que, para alcançar o sucesso, é fundamental
