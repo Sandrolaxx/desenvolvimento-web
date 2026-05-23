@@ -101,8 +101,7 @@ export default function Home() {
                         Brasil Hexa!
                     </h1>
                     <p>
-                        Você sabe que, para alcançar o sucesso, é fundamental
-                        ter parceiros que te impulsionem a ir mais longe.
+                        Menino ney foi convocado show de bola.
                     </p>
                     <div className="flex gap-1">
                         <span>
