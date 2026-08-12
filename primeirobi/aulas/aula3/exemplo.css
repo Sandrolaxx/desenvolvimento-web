@@ -1,0 +1,50 @@
+* {
+ margin: 0;
+ padding: 0;
+}
+
+#home {
+    background-color: aliceblue;
+    width: 200px;
+    height: 200px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+h1 {
+    color:violet;
+    text-decoration: underline;
+}
+
+h1 + p {
+    color: white;
+}
+
+div p {
+    color: white;
+}
+
+#home > p {
+    color: red;
+}
+
+.home-content {
+    background-color: chocolate;
+}
+
+.home-content > button:hover {
+    color: white;
+    cursor: pointer;
+    background-color: #4b4a4a;
+}
+
+.input-senha {
+    background-color: #126148;
+    border-width: 2px;
+    border-color: black;
+}
+
+.input-senha:focus {
+    background-color: #eef7f4;
+    border-color: #09f8b8;
+}
